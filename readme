@@ -1,5 +1,5 @@
 
-# **Project Title: Integrative Multi-Omics and Blood Routine Analysis for Risk Prediction**
+# **Integrative Multi-Omics and Blood Routine Analysis for Risk Prediction**
 
 ![Project Framework](./image.png)  
 **Figure 1: Overall Project Framework**
@@ -8,40 +8,39 @@
 
 ## **Table of Contents**
 
-1. [Project Overview](#project-overview)  
-2. [Dependencies](#dependencies)  
-3. [Code Structure](#code-structure)  
-4. [Usage Instructions](#usage-instructions)  
-5. [File Descriptions](#file-descriptions)  
-6. [Execution Examples](#execution-examples)  
-7. [Results](#results)  
-8. [Contact Information](#contact-information)  
+- [Project Overview](#project-overview)
+- [Dependencies](#dependencies)
+- [Code Structure](#code-structure)
+- [Usage Instructions](#usage-instructions)
+- [File Descriptions](#file-descriptions)
+- [Execution Examples](#execution-examples)
+- [Results](#results)
+- [Contact Information](#contact-information)
 
 ---
 
 ## **Project Overview**
 
-This project focuses on **early prediction of chronic disease risks** by integrating blood routine data and multi-omics data through deep learning and clustering approaches. The primary goals include:
+This project focuses on **early prediction of chronic disease risks** by integrating blood routine data and multi-omics data using deep learning and clustering methods.  
 
-- **Clustering analysis** of blood routine data to discover hidden sample patterns.  
-- **Identifying critical substances** from multi-omics data using deep learning methods.  
-- **Risk classification** for clinical blood routine data to predict disease risk effectively.  
-
-The project is modularized into distinct tasks for data processing, clustering, feature extraction, and classification.
+### **Objectives**:
+- Perform **clustering analysis** on blood routine data to discover hidden patterns.  
+- Use deep learning to analyze multi-omics data and identify critical features.  
+- Build a classification model for **disease risk prediction** based on blood routine data.  
 
 ---
 
 ## **Dependencies**
 
-The project requires the following software and libraries:  
+Ensure the following dependencies are installed:
 
-- **Python 3.9+**  
-- **PyTorch 2.5+**  
-- **Numpy 2.0+**  
-- **Scikit-learn**  
-- **Matplotlib**  
+- **Python 3.9+**
+- **PyTorch 2.5+**
+- **Numpy 2.0+**
+- **Scikit-learn**
+- **Matplotlib**
 
-To install all required dependencies, run:  
+Install dependencies using:
 
 ```bash
 pip install -r requirements.txt
@@ -53,34 +52,44 @@ pip install -r requirements.txt
 
 ```plaintext
 project-root/
-│-- blood clustering-real.py   # Blood routine risk classification
+│-- blood clustering-real.py   # Risk classification using blood routine data
 │-- datasets.py                # Data loading and preprocessing
 │-- lable_gen.py               # Clustering analysis for blood routine data
 │-- load_data.py               # Data loading utilities
-│-- main.py                    # Multi-omics analysis and model training
+│-- main.py                    # Multi-omics feature extraction and training
 │-- network.py                 # Deep neural network architecture
-│-- Nmetrics.py                # Evaluation metrics for the models
-│-- utils.py                   # Utility functions (e.g., visualization, logging)
+│-- Nmetrics.py                # Evaluation metrics
+│-- utils.py                   # Utility functions
 ```
 
 ---
 
 ## **Usage Instructions**
 
-### **1. Blood Routine Clustering Analysis**  
-To perform clustering analysis on blood routine data:  
+### **1. Clustering Analysis for Blood Routine Data**
+
+To analyze and cluster blood routine data, run:
+
 ```bash
 python lable_gen.py
 ```
 
-### **2. Multi-Omics Feature Extraction and Training**  
-To train the model and identify key substances using multi-omics data:  
+---
+
+### **2. Multi-Omics Feature Extraction and Training**
+
+To train the model and identify critical features from multi-omics data:
+
 ```bash
 python main.py
 ```
 
-### **3. Clinical Risk Classification**  
-To predict disease risks using blood routine data:  
+---
+
+### **3. Clinical Risk Classification**
+
+To perform disease risk classification on blood routine data:
+
 ```bash
 python blood clustering-real.py
 ```
@@ -89,55 +98,44 @@ python blood clustering-real.py
 
 ## **File Descriptions**
 
-- **blood clustering-real.py**  
-   - Performs risk classification using blood routine data.  
-   - Loads clinical data and applies the pre-trained model for prediction.  
-   - Outputs risk levels and key metrics.
-
-- **lable_gen.py**  
-   - Conducts clustering analysis on blood routine data.  
-   - Outputs clustering results and visualizations.
-
-- **main.py**  
-   - Trains the deep learning model with multi-omics data.  
-   - Extracts and saves the most critical biological substances for predictions.
-
-- **network.py**  
-   - Defines the deep learning architecture, including feature extraction and classification modules.
-
-- **datasets.py**  
-   - Handles data loading and preprocessing tasks for blood routine and multi-omics datasets.
-
-- **loss.py**  
-   - Implements custom loss functions for model optimization.
-
-- **Nmetrics.py**  
-   - Provides evaluation metrics such as accuracy, precision, recall, and F1-score.
-
-- **utils.py**  
-   - Contains utility functions like logging, visualization, and other supporting tools.
-
-- **web-model.py**  
-   - Deploys the trained model via a web interface, providing RESTful endpoints for predictions.
+| File                   | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **blood clustering-real.py** | Performs disease risk classification on blood routine data.             |
+| **lable_gen.py**       | Conducts clustering analysis of blood routine samples.                     |
+| **main.py**            | Trains the model and extracts key features from multi-omics data.          |
+| **network.py**         | Defines the neural network architecture.                                   |
+| **datasets.py**        | Loads and preprocesses blood routine and multi-omics datasets.             |
+| **Nmetrics.py**        | Provides evaluation metrics like accuracy, precision, recall, and F1-score. |
+| **utils.py**           | Includes helper utilities for visualization, logging, etc.                 |
 
 ---
 
 ## **Execution Examples**
 
-### **Clustering Analysis**  
-Run the clustering task on blood routine data:  
+### **Run Clustering Analysis**
+
+To cluster blood routine data:
+
 ```bash
 python lable_gen.py
 ```
 
-### **Multi-Omics Training**  
-Train the model on multi-omics datasets:  
+---
+
+### **Train Multi-Omics Model**
+
+To analyze multi-omics data and identify key features:
+
 ```bash
 python main.py
 ```
 
-### **Risk Classification**  
-Perform clinical risk classification using the blood routine dataset:  
+---
+
+### **Risk Classification**
+
+To predict disease risks using blood routine data:
+
 ```bash
 python blood clustering-real.py
 ```
@@ -146,22 +144,15 @@ python blood clustering-real.py
 
 ## **Results**
 
-- **Clustering Output**:  
-   Clustering labels, visualizations, and insights into sample patterns.
+- **Clustering Analysis**: Outputs clustering labels and visualizations for blood routine data.
+- **Feature Identification**: Saves extracted key features from multi-omics data.
+- **Risk Classification**: Outputs predicted risk levels along with evaluation metrics (accuracy, precision, recall, and F1-score).
 
-- **Feature Identification**:  
-   Extracted critical features from multi-omics data, saved for future analysis.
-
-- **Risk Classification**:  
-   - Outputs disease prediction results.  
-   - Evaluation metrics: accuracy, recall, precision, and F1-score.  
-
-Results are saved in a structured format for further interpretation and validation.
+Results are saved in structured formats for further analysis.
 
 ---
 
 ## **Contact Information**
 
-For inquiries, please contact:  
-**Email**: dzb20@nudt.edu.cn 
-
+For inquiries, please contact:
+**Email**: `dzb20@nudt.edu.cn`
