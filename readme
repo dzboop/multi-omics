@@ -1,1 +1,170 @@
-multi-omics code
+Here is the **README** file in English formatted for a webpage:
+
+---
+
+# **Project Title: Integrative Multi-Omics and Blood Routine Analysis for Risk Prediction**
+
+![Project Framework](./image.png)  
+**Figure 1: Overall Project Framework**
+
+---
+
+## **Table of Contents**
+
+1. [Project Overview](#project-overview)  
+2. [Dependencies](#dependencies)  
+3. [Code Structure](#code-structure)  
+4. [Usage Instructions](#usage-instructions)  
+5. [File Descriptions](#file-descriptions)  
+6. [Execution Examples](#execution-examples)  
+7. [Results](#results)  
+8. [Contact Information](#contact-information)  
+
+---
+
+## **Project Overview**
+
+This project focuses on **early prediction of chronic disease risks** by integrating blood routine data and multi-omics data through deep learning and clustering approaches. The primary goals include:
+
+- **Clustering analysis** of blood routine data to discover hidden sample patterns.  
+- **Identifying critical substances** from multi-omics data using deep learning methods.  
+- **Risk classification** for clinical blood routine data to predict disease risk effectively.  
+
+The project is modularized into distinct tasks for data processing, clustering, feature extraction, and classification.
+
+---
+
+## **Dependencies**
+
+The project requires the following software and libraries:  
+
+- **Python 3.9+**  
+- **PyTorch 2.5+**  
+- **Numpy 2.0+**  
+- **Scikit-learn**  
+- **Matplotlib**  
+
+To install all required dependencies, run:  
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## **Code Structure**
+
+```plaintext
+project-root/
+│-- blood clustering-real.py   # Blood routine risk classification
+│-- datasets.py                # Data loading and preprocessing
+│-- lable_gen.py               # Clustering analysis for blood routine data
+│-- load_data.py               # Data loading utilities
+│-- main.py                    # Multi-omics analysis and model training
+│-- network.py                 # Deep neural network architecture
+│-- Nmetrics.py                # Evaluation metrics for the models
+│-- utils.py                   # Utility functions (e.g., visualization, logging)
+```
+
+---
+
+## **Usage Instructions**
+
+### **1. Blood Routine Clustering Analysis**  
+To perform clustering analysis on blood routine data:  
+```bash
+python lable_gen.py
+```
+
+### **2. Multi-Omics Feature Extraction and Training**  
+To train the model and identify key substances using multi-omics data:  
+```bash
+python main.py
+```
+
+### **3. Clinical Risk Classification**  
+To predict disease risks using blood routine data:  
+```bash
+python blood clustering-real.py
+```
+
+---
+
+## **File Descriptions**
+
+- **blood clustering-real.py**  
+   - Performs risk classification using blood routine data.  
+   - Loads clinical data and applies the pre-trained model for prediction.  
+   - Outputs risk levels and key metrics.
+
+- **lable_gen.py**  
+   - Conducts clustering analysis on blood routine data.  
+   - Outputs clustering results and visualizations.
+
+- **main.py**  
+   - Trains the deep learning model with multi-omics data.  
+   - Extracts and saves the most critical biological substances for predictions.
+
+- **network.py**  
+   - Defines the deep learning architecture, including feature extraction and classification modules.
+
+- **datasets.py**  
+   - Handles data loading and preprocessing tasks for blood routine and multi-omics datasets.
+
+- **loss.py**  
+   - Implements custom loss functions for model optimization.
+
+- **Nmetrics.py**  
+   - Provides evaluation metrics such as accuracy, precision, recall, and F1-score.
+
+- **utils.py**  
+   - Contains utility functions like logging, visualization, and other supporting tools.
+
+- **web-model.py**  
+   - Deploys the trained model via a web interface, providing RESTful endpoints for predictions.
+
+---
+
+## **Execution Examples**
+
+### **Clustering Analysis**  
+Run the clustering task on blood routine data:  
+```bash
+python lable_gen.py
+```
+
+### **Multi-Omics Training**  
+Train the model on multi-omics datasets:  
+```bash
+python main.py
+```
+
+### **Risk Classification**  
+Perform clinical risk classification using the blood routine dataset:  
+```bash
+python blood clustering-real.py
+```
+
+---
+
+## **Results**
+
+- **Clustering Output**:  
+   Clustering labels, visualizations, and insights into sample patterns.
+
+- **Feature Identification**:  
+   Extracted critical features from multi-omics data, saved for future analysis.
+
+- **Risk Classification**:  
+   - Outputs disease prediction results.  
+   - Evaluation metrics: accuracy, recall, precision, and F1-score.  
+
+Results are saved in a structured format for further interpretation and validation.
+
+---
+
+## **Contact Information**
+
+For inquiries, please contact:  
+**Email**: dzb20@nudt.edu.cn 
+
